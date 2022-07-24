@@ -1,0 +1,22 @@
+.dropdown{
+    margin-right: 10px;
+}
+
+.dropdown a{
+    font-size: 18px;
+    color:white;
+ }
+ .dropdown-item{
+    background-color: darkslateblue;
+ }
+ 
+ a{
+    font-style: none;
+    text-decoration: none;
+}
+.navbar-brand{
+    color:white;
+}
+.bg-blue-dark{
+    background-color:darkslateblue;
+}
