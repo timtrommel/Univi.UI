@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-blue-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">Univi</a>
+    <a class="navbar-brand" href="#">Univi | Security Dashboard platofrm</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +14,7 @@
           <ul class="dropdown-menu" aria-labelledby="dropdownReports">
             <li>
               <a class="dropdown-item" aria-current="page" 
-              routerLink="/addReport">Aanmaken</a>
+              routerLink="/reports/add">Aanmaken</a>
             </li>
             <li>
               <a class="dropdown-item" aria-current="page" 
@@ -22,7 +22,7 @@
             </li>
             <li>
               <a class="dropdown-item" aria-current="page" 
-              routerLink="/overviewReports">Overzicht</a>
+              routerLink="/reports/overview'">Overzicht</a>
             </li>
           </ul>
         </li>
@@ -49,8 +49,6 @@
           </ul>
         </li>
         <li class="dropdown">
-
-        
           <a href="#" class="dropdown-toggle" id = "dropdownEmployees" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-person"></i>
             Medewerkers
@@ -58,7 +56,7 @@
           <ul class="dropdown-menu" aria-labelledby="dropdownEmployees">
             <li>
               <a class="dropdown-item" aria-current="page" 
-              routerLink="/addEmployee">Toevoegen</a>
+              routerLink="/employees/add">Toevoegen</a>
             </li>
             <li>
               <a class="dropdown-item" aria-current="page" 
@@ -66,14 +64,35 @@
             </li>
             <li>
               <a class="dropdown-item" aria-current="page" 
-              routerLink="/overviewEmployees">Overzicht</a>
+              routerLink="/employees">Overzicht</a>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" id = "dropdownSettings" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-gear"></i>
+            Instellingen
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownSettings">
+            <li>
+              <a class="dropdown-item" aria-current="page" 
+              routerLink="/settings/employees">Medewerkers</a>
+            </li>
+            <li>
+              <a class="dropdown-item" aria-current="page" 
+              routerLink="/settings/keys">Sleutels</a>
+            </li>
+            <li>
+              <a class="dropdown-item" aria-current="page" 
+              routerLink="/settings/reports">Rapportage</a>
             </li>
             <li>
             </li>
           </ul>
 
         </li>
-
     
        
       </ul>

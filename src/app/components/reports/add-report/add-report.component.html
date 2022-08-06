@@ -1,1 +1,71 @@
-<p>add-report works!</p>
+<div class="container my-5">
+  <h1 class="mb-3">Rapportage maken</h1>
+
+  <div class="row">
+    <div class="col-md-2">
+      <label for="" class="form-label">Datum toegevoegd:</label>
+      <input
+        class="form-control"
+        id="addedOnDate"
+        name="addedOnDate"
+        readonly="readonly"
+        value="{{ currentDate | date: 'dd-MM-yyyy hh:mm' }}"
+      />
+    </div>
+    <div class="col-md-4 mb-4">
+      <label for="addedByUser" class="form-label">Toegevoegd door:</label>
+      <input
+        class="form-control"
+        id="addedByUser"
+        name="addedByUser"
+        [(ngModel)]="addReportRequest.issuedBy"
+      />
+    </div>
+  </div>
+  <hr class="border border-primary" />
+
+  <div class="row">
+    <div class="col">
+      <form #form="ngForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Titel</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+            [(ngModel)]="addReportRequest.title"
+          />
+        </div>
+
+        <div class="col mb-3">
+          <label for="report" class="form-label">rapportage</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="reportTxt"
+            name="reportTxt"
+            [(ngModel)]="addReportRequest.description"
+          ></textarea>
+        </div>
+        <div class="col mb-3">
+          <label for="report" class="form-label">Betrokken medewerker(s)</label>
+          
+        </div>
+
+
+        <div class="col mb-3">
+          <label for="isActive" class="form-label">Afsluiten </label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="isActive"
+            name="isActive"
+            [(ngModel)]="addReportRequest.isActive"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Opslaan</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddEmployeeComponent } from './components/employees/add-employee/add-employee.component';
 import { EditEmployeeComponent } from './components/employees/edit-employee/edit-employee.component';
 import { EmployeesListComponent } from './components/employees/employees-list/employees-list.component';
+import { AddReportComponent } from './components/reports/add-report/add-report.component';
 import { ReportsListComponent } from './components/reports/reports-list/reports-list.component';
 
 const routes: Routes = [
@@ -24,8 +25,12 @@ const routes: Routes = [
       component:EditEmployeeComponent
     },
     {
-      path:'overviewReports',
+      path:'reports/overview',
       component:ReportsListComponent
+    },
+    {
+      path:'reports/add',
+      component:AddReportComponent
     }
 
 ];

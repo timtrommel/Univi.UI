@@ -1,33 +1,33 @@
 <div class="container my-5">
-    <h1 class="mb-3">Rapportages</h1>
-    
-    <table class="table" *ngIf="reports && reports.length > 0">
+  <h1 class="mb-3">Rapportages</h1>
+
+  <table class="table" *ngIf="reports && reports.length > 0">
     <thead>
-        <tr class="border-dark">
-            <th>Id</th>
-            <th>Datum en tijd</th>
-            <th>Nummer</th>
-            <th>Titel</th>
-            <th>Omschrijving</th>
-            <th>Actief</th>
-            <th> </th>
-        </tr>
-       
+      <tr class="border-dark">
+        <th>Id</th>
+        <th>Datum en tijd</th>
+        <th>Nummer</th>
+        <th>Titel</th>
+        <th>Omschrijving</th>
+        <th>Actief</th>
+        <th></th>
+      </tr>
     </thead>
-    
+
     <tbody>
-        <tr *ngFor="let reports of reports">
-            <td> {{reports.id}} </td>
-            <td> {{reports.dateCreated | date : 'dd-MM-yyyy'}} {{reports.timeCreated}} </td>
-            <td> {{reports.reportNo}} </td>
-            <td> {{reports.title}} </td>
-            <td> {{reports.description}} </td>
-            <td> {{reports.isActive }} </td>
-            <td><a [routerLink] = "[ '/reports' , 'edit', reports.id ] ">Bekijken</a></td>
-    
-        </tr>
+      <tr *ngFor="let reports of reports">
+        <td>{{ reports.id }}</td>
+        <td>
+          {{ reports.dateCreated | date: "dd-MM-yyyy" }}
+          {{ reports.timeCreated }}
+        </td>
+        <td>{{ reports.reportNo }}</td>
+        <td>{{ reports.title }}</td>
+        <td>{{ reports.description }}</td>
+        <td>{{ reports.isActive }}</td>
+        <td><a [routerLink]="['/reports', 'edit', reports.id]">Bekijken</a></td>
+      </tr>
     </tbody>
-    </table>
-    <p *ngIf="!reports || reports.length <=0 ">Geen rapportages gevonden</p>
-    </div>
-    
+  </table>
+  <p *ngIf="!reports || reports.length <= 0">Geen rapportages gevonden</p>
+</div>
