@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Report } from 'src/app/models/Report.model';
-import { ReportsService } from 'src/app/services/reports.service';
+import { Report } from '../../../models/Report.model';
+import { ReportsService } from '../../../services/reports.service';
 
 @Component({
   selector: 'app-add-report',
