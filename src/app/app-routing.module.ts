@@ -25,7 +25,7 @@ const routes: Routes = [
       component:EditEmployeeComponent
     },
     {
-      path:'reports/overview',
+      path:'reports/reportsList',
       component:ReportsListComponent
     },
     {

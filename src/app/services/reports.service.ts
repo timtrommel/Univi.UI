@@ -22,6 +22,12 @@ export class ReportsService {
   addReport(addReportRequest: Report): Observable<Report>
   {
     addReportRequest.id =  '00000000-0000-0000-0000-000000000000';
+    addReportRequest.dateCreated = new Date().toISOString()
+    addReportRequest.timeCreated = new Date().toISOString()
+    addReportRequest.editOnDate = new Date().toISOString()
+    addReportRequest.editOnTime = new Date().toISOString()
+    addReportRequest.closedOnDate = new Date().toISOString()
+    addReportRequest.closedOnTime = new Date().toISOString()
     return this.http.post<Report>(this.baseApiUrl + '/api/Reports', addReportRequest);
   }
 

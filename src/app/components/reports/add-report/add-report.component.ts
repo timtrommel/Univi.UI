@@ -27,6 +27,9 @@ export class AddReportComponent implements OnInit {
     title: ' ',
     description: ' ',
     isActive: true,
+    closeReport: false,
+    actionNeeded: false,
+    reportByEmployeeOrVisitor: '',
   };
   constructor(private ReportService: ReportsService, private router: Router) {}
 
@@ -35,7 +38,7 @@ export class AddReportComponent implements OnInit {
   addReport() {
     this.ReportService.addReport(this.addReportRequest).subscribe({
       next: (employee) => {
-        this.router.navigate(['Reports']);
+        this.router.navigate(['reports/reports-list']);
       },
     });
   }

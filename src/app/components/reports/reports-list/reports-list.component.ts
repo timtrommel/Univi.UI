@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { Report } from '../../../models/Report.model';
 import { ReportsService } from '../../../services/reports.service';
-import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-reports-list',

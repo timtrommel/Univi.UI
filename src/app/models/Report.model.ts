@@ -6,11 +6,15 @@ export interface Report{
     title: string;
     issuedBy: string;
     description: string;
-    isActive: boolean;
+    isActive: boolean; // Check if the report is active
+    closeReport: boolean;
     closedOnDate: string;
     closedOnTime: string;
     editOnDate: string;
     editOnTime: string;
+    actionNeeded: boolean;
+    reportByEmployeeOrVisitor: string;
+
     
     involvedEmployee: number;
     editByUser: number;
