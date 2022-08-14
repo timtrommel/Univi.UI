@@ -38,7 +38,7 @@ export class AddReportComponent implements OnInit {
   addReport() {
     this.ReportService.addReport(this.addReportRequest).subscribe({
       next: (employee) => {
-        this.router.navigate(['reports/reports-list']);
+        this.router.navigate(['reports/reportsList']);
       },
     });
   }
