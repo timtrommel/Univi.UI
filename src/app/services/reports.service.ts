@@ -18,11 +18,21 @@ export class ReportsService {
     return this.http.get<Report[]>(this.baseApiUrl + '/api/Reports');
   }
 
-
+  getReport(id: string): Observable<Report>{
+    return  this.http.get<Report>(this.baseApiUrl + '/api/Reports/' + id);
+   }
+  
   addReport(addReportRequest: Report): Observable<Report>
   {
     addReportRequest.id =  '00000000-0000-0000-0000-000000000000';
     return this.http.post<Report>(this.baseApiUrl + '/api/Reports', addReportRequest);
   }
+
+  updateReport(id: string, updateReportRequest: Report): 
+  Observable<Report>{
+    return  this.http.put<Report>(this.baseApiUrl + '/api/Reports/' + id, 
+    updateReportRequest);
+   }
+
 
 }

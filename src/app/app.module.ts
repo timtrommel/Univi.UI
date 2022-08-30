@@ -11,7 +11,8 @@ import { EditEmployeeComponent } from './components/employees/edit-employee/edit
 import { AddReportComponent } from './components/reports/add-report/add-report.component';
 import { ReportsListComponent } from './components/reports/reports-list/reports-list.component';
 import { DatePipe } from '@angular/common';
-
+import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.component';
+import { ReportDetailsComponent } from './components/reports/report-details/report-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,10 @@ import { DatePipe } from '@angular/common';
     AddEmployeeComponent,
     EditEmployeeComponent,
     AddReportComponent,
-    ReportsListComponent
+    ReportsListComponent,
+    DashboardComponent,
+    ReportDetailsComponent,
+
   ],
   imports: [
     BrowserModule,

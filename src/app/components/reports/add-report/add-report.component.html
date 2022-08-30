@@ -39,6 +39,27 @@
             [(ngModel)]="addReportRequest.title"
           />
         </div>
+        
+        <div class="mb-3">
+          <label for="name" class="form-label">Soort</label>
+          <input
+            type="text"
+            class="form-control"
+            id="kindofReport"
+            name="KindofReport"
+            [(ngModel)]="addReportRequest.kindOfReport"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Gebouw</label>
+          <input
+            type="text"
+            class="form-control"
+            id="building"
+            name="building"
+            [(ngModel)]="addReportRequest.building"
+          />
+        </div>
 
         <div class="col mb-3">
           <label for="report" class="form-label">rapportage</label>
@@ -54,7 +75,6 @@
           <label for="report" class="form-label">Betrokken medewerker(s)</label>
           
         </div>
-
 
         <div class="col mb-3">
           <label for="isActive" class="form-label">Afsluiten </label>

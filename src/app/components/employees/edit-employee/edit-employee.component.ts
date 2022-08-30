@@ -35,14 +35,8 @@ if(id){
     }
   })
 }
-
-
 }
   });
-
-
-
-
       }
 
       updateEmployee(){
