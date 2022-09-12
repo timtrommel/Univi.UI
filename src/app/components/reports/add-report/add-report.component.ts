@@ -1,6 +1,7 @@
+import { DatePipe, formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Report } from '../../../models/Report.model';
+import { Report } from '../../../models/report.model';
 import { ReportsService } from '../../../services/reports.service';
 
 @Component({
@@ -10,6 +11,8 @@ import { ReportsService } from '../../../services/reports.service';
 })
 export class AddReportComponent implements OnInit {
   currentDate = new Date();
+
+
   addReportRequest: Report = {
     id: ' ',
     building: '',
@@ -18,7 +21,8 @@ export class AddReportComponent implements OnInit {
     kindOfReport: '',
     issuedBy: ' ',
     involvedEmployee: '',
-    dateCreated: new Date(),
+    dateCreated: this.currentDate,
+    dateEvent:  this.currentDate,
     editOnDate: new Date(),
     editByUser: '',
     title: ' ',
@@ -28,9 +32,10 @@ export class AddReportComponent implements OnInit {
     actionNeeded: false,
     reportByEmployeeOrVisitor: '',
   };
-  constructor(private ReportService: ReportsService, private router: Router) {}
-
-  ngOnInit(): void {}
+  constructor(private ReportService: ReportsService, private datePipe : DatePipe, private router: Router) {}
+  ngOnInit(): void {
+    const cValue = formatDate(this.currentDate, 'yyyy-MM-dd', 'en-US');
+  }
 
   addReport() {
     this.ReportService.addReport(this.addReportRequest).subscribe({

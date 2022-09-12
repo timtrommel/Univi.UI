@@ -1,1 +1,58 @@
-<p>report-details works!</p>
+<div class="container my-5">
+    <h1 class="mb-3 text-center">Details rapportage #{{ReportDetails.reportNo}}</h1>
+    
+    <div class="row">
+        <div class="col">
+            <div class="mb-3">
+                <h4 for="dateCreated" class="form-label text-primary">Datum:</h4>
+                <div>{{ReportDetails.dateCreated | date: "dd-MM-YYYY"}}</div>
+                <hr>
+                </div>
+                <div class="mb-3">
+                    <h4 for="issuedBy" class="form-label text-primary">Door:</h4>
+                    <div>{{ReportDetails.issuedBy}}</div>
+                    <hr>
+                    </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <form #form ="ngForm">
+                <div class="mb-3">
+                  <h4 for="title" class="form-label text-primary">Titel:</h4>
+                  <div>{{ReportDetails.title}}</div>
+                  <hr>
+                  </div>
+                <div class="mb-3">
+                    <h4 for="kindOfReport" class="form-label text-primary">Soort:</h4>
+                    <div>{{ReportDetails.kindOfReport}}</div>
+                    <hr>
+                    </div>
+                  <div class="mb-3">
+                    <h4 for="building" class="form-label text-primary">Gebouw:</h4>
+                    <div>{{ReportDetails.building}}</div>
+                    <hr>
+                    </div>
+                    <div class="mb-3">
+                        <h4 for="description" class="form-label text-primary">Rapportage:</h4>
+                        <div>{{ReportDetails.description}}</div>
+                        <hr>
+                        </div>
+                  <div class="mb-3">
+                    <h4 for="involvedEmployee" class="form-label text-primary">Betrokken medewerker(s):</h4>
+                   <div>{{ReportDetails.involvedEmployee}}</div>
+                   <hr>
+                   </div>
+                  <div class="mb-3">
+                    <h4 for="closed" class="form-label text-primary">Afgesloten:</h4>
+                    <div>{{ReportDetails.closeReport}}</div>
+                    <hr>
+                    </div>
+              </form>
+        </div>
+    </div>
+    
+    
+    </div>

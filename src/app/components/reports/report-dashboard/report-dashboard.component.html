@@ -1,0 +1,36 @@
+<div class="container-fluid my-5">
+    <h3 class="mb-3 text-center text-primary">Laatste 5 rapportages</h3>
+    <table class="table" *ngIf="reports && reports.length > 0">
+      <thead>
+        <tr class="border-dark">
+          <th class="col">Datum en tijd</th>
+          <th class="col">Rapport #</th>
+          <th class="col">Titel</th>
+          <th class="col">Omschrijving</th>
+          <th class="col">Actief</th>
+          <th class="col"></th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let reports of reports">
+          <td>
+            {{ reports.dateCreated | date: 'dd-MM-yyyy' }}
+            {{ reports.dateCreated | date: 'HH:mm' }}
+          </td>
+          <td>{{ reports.reportNo }}</td>
+          <td>{{ reports.title }}</td>
+          <td>{{ reports.description }}</td>
+          <td *ngIf="reports.isActive == true; else Closed ">Actief</td>
+          <td><a [routerLink] = "[ '/reports', 'details',  reports.id ] ">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!reports || reports.length <= 0">Geen rapportages gevonden</p>
+  </div>
+  
+  
+  <!-- Template for showing "Afgesloten" -->
+  <ng-template #Closed>
+    Afgesloten
+  </ng-template>

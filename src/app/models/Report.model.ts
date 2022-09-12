@@ -2,6 +2,7 @@ export interface Report{
     id: string;
     reportNo: number;
     dateCreated: Date;
+    dateEvent: Date; //Date of event
     title: string;
     issuedBy: string;
     description: string;

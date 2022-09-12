@@ -1,0 +1,43 @@
+<div class="container my-5">
+    <h1 class="mb-3">Voeg gebouw toe</h1>
+    
+    <div class="row">
+        <div class="col">
+            <form #form ="ngForm" (ngSubmit)="addBuilding()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Naam</label>
+                  <input type="text" class="form-control" id="name"
+                   name="name" [(ngModel)] = "addBuildingRequest.name">
+                </div>
+                <button type="submit" class="btn btn-primary">Opslaan</button>
+              </form>
+        </div>
+    </div>
+    <hr class="border border-dark">
+
+    <h1>Toegevoegde gebouwen</h1>
+    
+    
+<table class="table" *ngIf="buildings && buildings.length > 0">
+    <thead>
+        <tr class="border-dark">
+            <th>Naam</th>
+            <th> </th>
+        </tr>
+       
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let building of buildings">
+            <td> {{building.name}} </td>
+          
+            <!-- Toon de details van het gebouw -->
+            <td><a [routerLink] = "[ '/buildings' , 'edit', building.id ] ">Bekijken</a></td>
+        </tr>
+    </tbody>
+    </table>
+    <p *ngIf="!buildings || buildings.length <=0 ">Geen gebouwen gevonden</p>
+
+
+
+    </div>

@@ -39,6 +39,18 @@
             [(ngModel)]="addReportRequest.title"
           />
         </div>
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Datum gebeurtenis</label>
+          <input
+          type="date"
+          class="form-control"
+          id="dateEvent"
+          name="dateEvent"
+          value="{{ currentDate | date: 'dd-MM-yyyy hh:mm' }}"
+          [(ngModel)]="addReportRequest.dateEvent"
+        />
+        </div>
         
         <div class="mb-3">
           <label for="name" class="form-label">Soort</label>

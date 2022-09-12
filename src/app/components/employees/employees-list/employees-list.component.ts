@@ -26,7 +26,6 @@ export class EmployeesListComponent implements OnInit {
     }
    })
    
-
   }
 
 }

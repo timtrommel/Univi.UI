@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Report } from 'src/app/models/Report.model';
+import { Report } from 'src/app/models/report.model';
 import { ReportsService } from 'src/app/services/reports.service';
 
 @Component({
@@ -19,6 +19,7 @@ export class ReportDetailsComponent implements OnInit {
     issuedBy: ' ',
     involvedEmployee: '',
     dateCreated: new Date(),
+    dateEvent:new Date(),
     editOnDate: new Date(),
     editByUser: '',
     title: ' ',

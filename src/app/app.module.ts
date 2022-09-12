@@ -11,8 +11,10 @@ import { EditEmployeeComponent } from './components/employees/edit-employee/edit
 import { AddReportComponent } from './components/reports/add-report/add-report.component';
 import { ReportsListComponent } from './components/reports/reports-list/reports-list.component';
 import { DatePipe } from '@angular/common';
-import { DashboardComponent } from './components/Dashboard/dashboard/dashboard.component';
+import { DashboardComponent } from './components/Dashboard/dashboard.component';
 import { ReportDetailsComponent } from './components/reports/report-details/report-details.component';
+import { ReportDashboardComponent } from './components/reports/report-dashboard/report-dashboard.component';
+import { SettingsReportComponent } from './settings-report/settings-report.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import { ReportDetailsComponent } from './components/reports/report-details/repo
     ReportsListComponent,
     DashboardComponent,
     ReportDetailsComponent,
+    ReportDashboardComponent,
+    SettingsReportComponent,
 
   ],
   imports: [
